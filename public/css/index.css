@@ -1,0 +1,621 @@
+:root {
+
+      --primary: #2c2c2c;
+
+      --accent: #fdf6f0;
+
+      --white: #fffafc;
+
+      --cta: #d291bc;
+
+      --cta-hover: #b979a6;
+
+    }
+
+    
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      font-family: 'Poppins', sans-serif;
+
+      background: var(--accent);
+
+      color: var(--primary);
+
+    }
+
+
+
+    nav.navbar {
+
+      display: flex;
+
+      justify-content: flex-end;
+
+      gap: 1rem;
+
+      padding: 1rem 2rem;
+
+      background: var(--white);
+
+    }
+
+
+
+    nav.navbar button,
+
+    nav.navbar a.cta {
+
+      text-decoration: none;
+
+      color: var(--primary);
+
+      padding: 0.5rem 1rem;
+
+      border: 1px solid var(--primary);
+
+      border-radius: 5px;
+
+      background: transparent;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: background 0.3s ease;
+
+    }
+
+
+
+    nav.navbar button:hover,
+
+    nav.navbar a.cta:hover {
+
+      background: var(--cta);
+
+      color: white;
+
+      border-color: var(--cta);
+
+    }
+
+
+
+    header {
+
+      padding: 2rem;
+
+      text-align: center;
+
+      background: linear-gradient(to bottom, var(--white), var(--accent));
+
+    }
+
+
+
+    header h1 {
+
+      font-family: 'Playfair Display', serif;
+
+      font-size: 4rem;
+
+    }
+
+
+
+    .hero {
+
+      text-align: center;
+
+      padding: 4rem 1rem;
+
+    }
+
+
+
+    .hero h2 {
+
+      font-size: 2.5rem;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+
+    .hero p {
+
+      max-width: 600px;
+
+      margin: 0 auto 2rem;
+
+    }
+
+
+
+    .cta {
+
+      padding: 0.75rem 2rem;
+
+      background: var(--cta);
+
+      color: white;
+
+      border-radius: 8px;
+
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition: background 0.3s ease;
+
+    }
+
+    /* Make the testimonial image, texts and box fade+slide on change */
+
+.testimonial-left,
+
+.testimonial-image img,
+
+.testimonial-right {
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
+
+}
+
+
+
+/* When fading in, apply scale and slight slide */
+
+.fade-in {
+
+  animation: fadeSlide 0.6s ease forwards;
+
+}
+
+
+
+@keyframes fadeSlide {
+
+  from { opacity: 0; transform: translate(20px) scale(0.95); }
+
+  to { opacity: 1; transform: translate(0) scale(1); }
+
+}
+
+
+
+    .cta:hover {
+
+      background: var(--cta-hover);
+
+    }
+
+
+
+    /* Image carousel */
+
+    .swiper.mySwiper {
+
+      padding: 4rem 2rem;
+
+      background: var(--white);
+
+    }
+
+
+
+    .swiper.mySwiper .swiper-slide {
+
+      width: 153px !important;
+
+      height: 300px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+    /* New fade+rotate for the testimonial image */
+
+.testimonial-image img.fade-in {
+
+  animation: fadeRotate 0.8s ease forwards;
+
+}
+
+
+
+@keyframes fadeRotate {
+
+  from { opacity: 0; transform: rotate(15deg) scale(0.95); }
+
+  to { opacity: 1; transform: rotate(0) scale(1); }
+
+}
+
+
+
+    .swiper.mySwiper .swiper-slide img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 16px;
+
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+      transition: transform 0.4s ease, opacity 0.4s ease;
+
+    }
+
+
+
+    .swiper.mySwiper .swiper-slide img:hover {
+
+      transform: scale(1.05) rotate(1deg);
+
+      opacity: 0.95;
+
+    }
+
+
+
+    /* Testimonials carousel */
+
+    .testimonial-section {
+
+      padding: 4rem 2rem;
+
+      background: var(--accent);
+
+      text-align: center;
+
+    }
+
+
+
+    .testimonial-section h2 {
+
+      font-size: 3rem;
+
+      font-family: 'Playfair Display', serif;
+
+      margin-bottom: 3rem;
+
+    }
+
+
+
+    .testimonial-carousel {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 2rem;
+
+      background: var(--white);
+
+      padding: 2rem;
+
+      border-radius: 16px;
+
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+
+    }
+
+
+
+    .testimonial-left, .testimonial-right {
+
+      width: 25%;
+
+    }
+
+
+
+    .testimonial-left h4 {
+
+      font-size: 1rem;
+
+      color: #555;
+
+      margin-bottom: 0.5rem;
+
+    }
+
+
+
+    .testimonial-left p {
+
+      font-size: 1.25rem;
+
+      font-weight: bold;
+
+      color: #111;
+
+    }
+
+
+
+    .testimonial-image {
+
+      width: 300px;
+
+      animation: float 6s ease-in-out infinite;
+
+    }
+
+
+
+    .testimonial-image img {
+
+      width: 100%;
+
+      border-radius: 20px;
+
+      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+
+    }
+
+
+
+    .testimonial-right .user-info {
+
+      display: flex;
+
+      align-items: center;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+
+    .testimonial-right .user-info img {
+
+      width: 50px;
+
+      height: 50px;
+
+      border-radius: 50%;
+
+      margin-right: 0.75rem;
+
+      border: 2px solid #ccc;
+
+    }
+
+
+
+    .testimonial-right .user-info span {
+
+      font-weight: 600;
+
+      font-size: 1.3rem;
+
+    }
+
+
+
+    .testimonial-right .stars {
+
+      color: gold;
+
+      font-size: 1.1rem;
+
+      margin-bottom: 0.3rem;
+
+    }
+
+
+
+    .testimonial-right .review-title {
+
+      font-size: 1.1rem;
+
+      font-weight: 600;
+
+      margin-bottom: 0.5rem;
+
+      color: #222;
+
+    }
+
+
+
+    .testimonial-right p {
+
+      font-size: 1.25rem;
+
+      font-style: italic;
+
+      line-height: 1.8;
+
+      color: #444;
+
+    }
+
+
+
+    .testimonial-right .review-meta {
+
+      font-size: 0.9rem;
+
+      color: #888;
+
+      margin-top: 0.75rem;
+
+      display: block;
+
+    }
+
+
+
+    @keyframes float {
+
+      0% { transform: translate(0); }
+
+      50% { transform: translate(-10px); }
+
+      100% { transform: translate(0); }
+
+    }
+
+
+
+    /* Auth modal */
+
+    .modal {
+
+      display: none;
+
+      position: fixed;
+
+      z-index: 1000;
+
+      left: 0; top: 0;
+
+      width: 100%; height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.6);
+
+    }
+
+
+
+    .modal-content {
+
+      background: var(--white);
+
+      margin: 8% auto;
+
+      padding: 30px;
+
+      border-radius: 20px;
+
+      width: 350px;
+
+      position: relative;
+
+      box-shadow: 0 0 30px rgba(210, 145, 188, 0.3);
+
+      color: var(--primary);
+
+    }
+
+
+
+    .close {
+
+      position: absolute;
+
+      right: 20px;
+
+      top: 15px;
+
+      font-size: 28px;
+
+      cursor: pointer;
+
+      color: var(--primary);
+
+    }
+
+
+
+    .auth-form {
+
+      display: none;
+
+      flex-direction: column;
+
+      gap: 15px;
+
+    }
+
+
+
+    .auth-form.active {
+
+      display: flex;
+
+    }
+
+
+
+    .auth-form input {
+
+      padding: 10px;
+
+      border: 1px solid var(--cta);
+
+      background: rgba(255, 255, 255, 0.8);
+
+      color: var(--primary);
+
+      border-radius: 5px;
+
+    }
+
+
+
+    .auth-form button {
+
+      padding: 10px;
+
+      border-radius: 30px;
+
+      border: none;
+
+      background: var(--cta);
+
+      color: white;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: background 0.3s ease;
+
+    }
+
+
+
+    .auth-form button:hover {
+
+      background: var(--cta-hover);
+
+    }
+
+
+
+    footer {
+
+      text-align: center;
+
+      padding: 2rem;
+
+    }

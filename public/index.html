@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>FashAura — Where Fashion Meets Imagination</title>
+
+
+
+  <!-- Fonts and Swiper -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+
+
+  <nav class="navbar">
+  <!-- Auth and actions area -->
+  <div style="display: flex; gap: 1rem; align-items: center; margin-left: auto;">
+    <!-- Login / Signup buttons -->
+    <button id="loginBtn" onclick="openModal('signin')">Login</button>
+    <button id="signupBtn" onclick="openModal('signup')">Sign Up</button>
+
+    <!-- Always visible: Create Your Character -->
+    <a href="chatbot.html" class="cta">Create Your Character</a>
+
+    <!-- Profile dropdown (shown after login) -->
+    <div id="profileDropdown" style="position: relative; display: none;">
+      <img id="profilePic" src="" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer;" />
+      <div id="dropdownMenu" style="
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 0.5rem;
+        z-index: 100;
+      ">
+
+      <div id="userEmail" style="font-size: 0.85rem; color: #555; margin-bottom: 0.5rem;"></div>
+        <button onclick="logout()" style="background: none; border: none; cursor: pointer; font-weight: 600; color: var(--primary); padding-left: 5px;">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+  <header>
+
+    <h1>FashAura</h1>
+
+    <p class="tagline">Where Fashion Meets Imagination</p>
+
+  </header>
+
+
+
+  <section class="hero">
+
+  <h2>Design the Character of Your Dreams</h2>
+
+  <p>Craft your own fashion avatar with FashAura's intelligent character creation engine. From hairstyle to heels — make every detail yours.</p>
+
+  <a href="chatbot.html" class="cta">Start Designing</a>
+
+</section>
+
+
+
+
+
+  <!-- Image carousel -->
+
+  <div class="swiper mySwiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="images/img1.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img2.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img3.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img4.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img5.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img6.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img7.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img8.png" /></div>
+
+      <div class="swiper-slide"><img src="images/img9.png" /></div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Testimonials carousel -->
+
+  <section class="testimonial-section">
+
+    <h2>Customer Reviews</h2>
+
+    <div class="swiper testimonialSwiper">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+
+          <div class="testimonial-carousel">
+
+            <div class="testimonial-left">
+
+              <h4>Prompt Given</h4>
+
+              <p>Rosé Queen in a Velvet Dress</p>
+
+            </div>
+
+            <div class="testimonial-image">
+
+              <img src="images/rosequeen.jpg" />
+
+            </div>
+
+            <div class="testimonial-right">
+
+              <div class="user-info">
+
+                <img src="https://i.pravatar.cc/100?img=5" />
+
+                <span>Aarushi Mehta</span>
+
+              </div>
+
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+
+              <div class="review-title">Absolutely Stunning!</div>
+
+              <p>FashAura turned my dream into reality! The Rosé Queen design made me feel like royalty.</p>
+
+              <span class="review-meta">June 2025, Delhi</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="swiper-slide">
+
+          <div class="testimonial-carousel">
+
+            <div class="testimonial-left">
+
+              <h4>Prompt Given</h4>
+
+              <p>Elegant woman in cream outfit, gold jewelry</p>
+
+            </div>
+
+            <div class="testimonial-image">
+
+              <img src="images/punjabisuit.jpg" />
+
+            </div>
+
+            <div class="testimonial-right">
+
+              <div class="user-info">
+
+                <img src="https://i.pravatar.cc/100?img=6" />
+
+                <span>Amit Garg</span>
+
+              </div>
+
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+
+              <div class="review-title">Exactly What I Imagined!</div>
+
+              <p>FashAura gave life to my vision with cream tones, gentle glow, timeless elegance.</p>
+
+              <span class="review-meta">June 2025, Delhi</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="swiper-slide">
+
+          <div class="testimonial-carousel">
+
+            <div class="testimonial-left">
+
+              <h4>Prompt Given</h4>
+
+              <p>Desi Diva in a Power Saree</p>
+
+            </div>
+
+            <div class="testimonial-image">
+
+              <img src="images/saree.jpg" />
+
+            </div>
+
+            <div class="testimonial-right">
+
+              <div class="user-info">
+
+                <img src="https://i.pravatar.cc/100?img=8" />
+
+                <span>Hitesh Bhardwaj</span>
+
+              </div>
+
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+
+              <div class="review-title">Cultural Confidence!</div>
+
+              <p>It beautifully captured the confidence of a Desi woman in traditional attire with a modern twist.</p>
+
+              <span class="review-meta">June 2025, Delhi</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Auth modal -->
+
+  <div id="authModal" class="modal">
+
+    <div class="modal-content">
+
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <form id="signinForm" class="auth-form">
+  <h3>Login</h3>
+  <input type="email" id="loginEmail" placeholder="Email" required />
+  <input type="password" id="loginPassword" placeholder="Password" required />
+  <button type="submit">Login</button>
+  <button type="button" onclick="signInWithGoogle()">Continue with Google</button>
+</form>
+
+<form id="signupForm" class="auth-form">
+  <h3>Sign Up</h3>
+  <input type="text" id="signupName" placeholder="Name" required />
+  <input type="email" id="signupEmail" placeholder="Email" required />
+  <input type="password" id="signupPassword" placeholder="Password" required />
+  <button type="submit">Sign Up</button>
+  <button type="button" onclick="signInWithGoogle()">Continue with Google</button>
+</form>
+
+
+
+    </div>
+
+  </div>
+
+
+
+  <footer>
+
+    <a href="https://forms.gle/AWYNCbMjPPCV5oSq6" target="_blank" class="cta">Give Feedback</a>
+
+    <br>
+
+    <br>
+
+  <p>© 2025 FashAura. All rights reserved.</p>
+
+  
+
+  
+
+</footer>
+
+
+
+
+
+  <!-- Scripts -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Firebase App (Core) -->
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/index.js"></script>
+
+
+</body>
+
+</html>

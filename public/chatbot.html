@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FashAura – Dream Design Studio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/chatbot.css">
+    
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">FashAura</div>
+      <label>Height: <span id="heightValue">5'4"</span></label>
+      <input type="range" id="heightSlider" min="55" max="72" value="64" />
+      <label>Body Measurements:</label>
+      <input type="text" id="measurements" placeholder="34-28-36" />
+      <label>Skin Tone:</label>
+      <input type="range" id="skinToneSlider" min="0" max="100" value="50" />
+      <div id="skinTonePreview" style="background: #c68642"></div>
+      <div class="chat-history" id="chatHistory"></div>
+      <div class="chat-input">
+        <textarea
+          id="designPrompt"
+          placeholder="Describe your dream outfit..."
+          rows="2"
+        ></textarea>
+        <button id="micBtn" title="Speak your design" style="margin-left: 10px; background: #d291bc; border: none; color: white; padding: 10px 14px; border-radius: 10px; cursor: pointer;">🎙</button>
+
+      </div>
+      <button id="regenerateWithTips">Regenerate with Styling Tips</button>
+    </div>
+    <div class="main-view">
+      <div class="rotating-container">
+        <div id="gallery" style="position: absolute; bottom: 10px; left: 20px; width: 90%; max-height: 100px; overflow-x: auto; display: flex; gap: 10px;"></div>
+        <div class="model-placeholder" id="modelPlaceholder">Waiting...</div>
+        <div class="platform"></div>
+        <button id="downloadImage" style="margin-top: 15px; padding: 8px 14px; border: none; background: #111; color: #fff; border-radius: 8px; font-weight: 500; cursor: pointer; display: none;">Download Design</button>
+
+      </div>
+    </div>
+    <button class="pinned-feedback-btn" onclick="openFeedbackModal()">Give Feedback</button>
+
+    <div id="feedbackPopupModal" class="feedback-modal">
+  <div class="feedback-modal-content">
+    <span class="feedback-close" onclick="closeFeedbackModal()">&times;</span>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjO9xt1ex9g2eo4SDsnHbtPX9JEOAQ1sMTBLcphZ_RN5m7Vg/viewform?embedded=true" 
+            width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+</div>
+
+<script src="js/chatbot.js"></script>
+
+
+  </body>
+</html>
